@@ -1,0 +1,53 @@
+#program
+def csort(arr):
+    if not arr:
+        return []
+    max_val=max(arr)
+    count=[0]*(max_val+1)
+    #freq
+    for num in arr:
+        count[num]+=1
+    #count
+    for i in range(1,len(count)):
+        count[i]+=count[i-1]
+    output=[0]*len(arr)
+    #stable sort
+    for num in reversed(arr):
+        output[count[num]-1]=num
+        count[num]-=1
+    #coping sorted list
+    for i in range(len(arr)):
+        arr[i]=output[i]
+
+size=int(input("enter the number of elements:"))
+print("Enter ",n,"elemets....")
+arr=[]
+for _ in range(size):
+    arr.append(int(input()))
+print("original array:",arr)
+csort(arr)
+print("sorted array:",arr)
+
+
+output:
+enter the number of elements: 17
+Enter  5 elemets....
+ 2
+ 1
+ 1
+ 0
+ 2
+ 5
+ 4
+ 0
+ 2
+ 8
+ 7
+ 7
+ 9
+ 2
+ 0
+ 1
+ 9
+original array: [2, 1, 1, 0, 2, 5, 4, 0, 2, 8, 7, 7, 9, 2, 0, 1, 9]
+sorted array: [0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 4, 5, 7, 7, 8, 9, 9]
