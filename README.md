@@ -1,12 +1,13 @@
- Counting Sort in Radix Sort
+===> Counting Sort in Radix Sort
  
 - It is non-comparision sort 
-- no -ve nos
-- no long nos
-- short confined nos only ex:- 0-100
+- no negative numbers
+- no long numbers
+- short confined nos only ex:- 0 - 100
 
 
 EX:--
+
 Value:- 2 1 1 0 2 5 4 0 2 8  7  7  9  2  0  1  9
 Index:- 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
 
@@ -17,7 +18,7 @@ possabilites of o/p :-  3 6 10 10 11 12 12 14 15 17   (Sum of the Repeated nos)
 0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
 ---------------------------------------------------------------------
 | 0 | 0 | 0 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | 4 | 5 | 7 | 7 | 8 | 9 | 9 |
----------------------------------------------------------------------      '''
+---------------------------------------------------------------------  
 
 --> Algorithm
 
